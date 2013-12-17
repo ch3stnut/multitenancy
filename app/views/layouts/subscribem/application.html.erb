@@ -11,6 +11,10 @@
   <%= content_tag(:div, v, class: k) %>
 <% end %>
 
+<% if user_signed_in? %>
+  Signed in as <%= current_user.email %>
+<% end %>
+
 <%= yield %>
 
 </body>

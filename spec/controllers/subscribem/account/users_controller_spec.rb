@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module Subscribem
-  describe AccountsController do
+  describe Account::UsersController do
 
   end
 end

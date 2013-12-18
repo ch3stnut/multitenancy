@@ -13,6 +13,10 @@ module Subscribem
     has_many :members, class_name: "Subscribem::Member"
     has_many :users, through: :members
 
+    def create_schema
+      Apartment::Database.create(subdomain)
+    end
+
     def self.create_with_owner(params={})
       account = new(params)
       
